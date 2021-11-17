@@ -190,14 +190,14 @@ async function requrest() {
         truc = f.find(a => a.author == pixel.author)
         //console.log(truc)
         console.log("reload")
-        // await axios.put('https://api-flag.fouloscopie.com/pixel', 
-        // { "hexColor": tab2[fi.xx][fi.yy], "pixelId": truc.entityId }, 
-        // { headers: { "Content-Type": "application/json", "Authorization": "gis99pk2imr7dadeekru42jf6gywi0et" } }).then((response) => {
-        //     console.log("ok")
-        // }).catch((error)=>{
-        //     console.log(error)
-        // })
-    }, 10000);
+        await axios.put('https://api-flag.fouloscopie.com/pixel', 
+        { "hexColor": tab2[fi.xx][fi.yy], "pixelId": truc.entityId }, 
+        { headers: { "Content-Type": "application/json", "Authorization": "gis99pk2imr7dadeekru42jf6gywi0et" } }).then((response) => {
+            console.log("ok")
+        }).catch((error)=>{
+            console.log(error)
+        })
+    }, 140000);
 }
 requrest()
 app.listen(port, () => {
