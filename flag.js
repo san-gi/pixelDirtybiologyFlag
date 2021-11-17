@@ -2,12 +2,13 @@ const axios = require('axios');
 const express = require('express')
 const app = express()
 flag = null
-const port = 3001
+const port = 80
+percent = ""
 str = "<div style='display: inline-block;'><table style='border-collapse: collapse;'><tbody><tr>"
 str2 = "<div style='display: inline-block;'><table style='border-collapse: collapse;'><tbody><tr>"
 str3 = "<div style='display: inline-block;'><table style='border-collapse: collapse;'><tbody><tr>"
 app.get('/', (req, res) => {
-    res.send(str + str2 + str3)
+    res.send(str + str2 + str3+percent)
 })
 total = 0
 act = 0
@@ -99,6 +100,7 @@ async function requrest() {
             console.log(total)
             console.log(act)
             console.log(act / total)
+            percent="<div style='display: inline-block;'>"+(act / total)+"</div>"
 
         })
        
