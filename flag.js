@@ -226,9 +226,10 @@ async function requrest() {
             if (tokens[a].dispo) {
 
                 if (inco.length > i) {
-                    console.log(tokens[a].token + " s'occupe de " + inco[i])
+                    rdm = Math.floor(Math.random()*inco.length)
+                    console.log(tokens[a].token + " s'occupe de " + inco[rdm])
                     tokens[a].dispo = false
-                    await requrest(a, i)
+                    await requrest(a, rdm)
 
                 }
                 i++
